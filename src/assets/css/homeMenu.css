@@ -1,0 +1,86 @@
+/*ctrl + alt + f : prettier*/
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.navbarMenu {
+  background-color: #999;
+  margin: 600px;
+  width: 168px;
+  height: 61px;
+  text-align: center;
+  color: #fff;
+
+  /* hipo hop */
+  font-family: "Lalezar", cursive;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.navbar {
+  align-content: center;
+  background-color: #4d4d4d;
+  width: 100vw;
+  height: 61px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar.css */
+
+/* .navbarLeft {
+  background-color: #4d4d4d;
+  margin-top: 61px;
+  width: 147px;
+  height: 100vh;
+  margin: 0px;
+  float:left ;
+  z-index: 100;
+transform: translateX(61px);
+
+}*/
+
+.col-1 {
+  min-width: 160px;
+  height: 100vh;
+  margin: 0px;
+  float: left;
+  z-index: 100;
+  background-color: #4d4d4d;
+  margin-top: 61px;
+
+  
+}
+
+
+/* Establece un ancho mínimo para la última columna */
+.col-3 {
+  min-width: 320px;
+  background-color: #aa8787;
+  
+}
+
+.imgLogo {
+
+  width: 104px;
+  height: 107px;
+  margin-left: 20px;
+  margin-bottom: 20px; /* Agrega margen inferior para separar de los botones */
+}
+
+.buttonOrdenar,
+.buttonCocina {
+  margin-top: 10px;
+  width: 147px;
+  height: 41px;
+  background: #999;
+  font-family: "Lalezar", cursive;
+  color: #fff;
+}
