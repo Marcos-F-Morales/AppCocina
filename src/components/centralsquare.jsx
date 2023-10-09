@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useEffect } from 'react'
+import getAllFood from '../api/ordersApi'
+import { useState } from 'react';
+import {} from "../assets/css/cardMenu.css"
 
 
 function square() {
-    return (
-        <div className="sm:container mx-auto">
-            <div className="Orden mx-auto">
-                <div className="NumeroOrden">Orden 1 </div>
-                <div className="row">
-                    <div className="col">
+    const [orders, setOrders] = useState([]);
 
-                    </div>
-                    <div className="col-4 mx-auto">
-                        <button className="buttonListo my-10">Listo</button>
-                        
-                    </div>
-                </div>
+    useEffect(() => {
+      async function loadOrders() {
+        const res = await getAllFood();
+        setOrders(res.data);
+        console.log(res)
+      }
+      loadOrders();
+    }, []);
+    
+    
+      return <div>
+    
+    {orders.map(food => (
+      <div className='cardOrders'>
+            <div key={food.id}>
+              <h1>{food.name} - Q. {food.price} .00</h1> 
+            
             </div>
-
-
-
-
+            <button className="bg-piel-100  text-black font-Lalezar sm-w-147 py-2 px-1 mt-1/2 rounded">
+      Ordenar
+    </button>
+            </div>
+          ))}
+    
+    
+    
         </div>
-
-    )
+      
 
 
 }
